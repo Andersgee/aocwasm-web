@@ -5,6 +5,7 @@ import { Comp } from "./Comp";
 export function generateMetadata({ params }: Props): Metadata {
   return {
     title: `Webassembly solutions - Day ${params.daynumber} - Advent of Code 2023`,
+    description: `Webassembly solutions - Day ${params.daynumber} - Advent of Code 2023`,
   };
 }
 

@@ -3,7 +3,7 @@ import { WasmProvider } from "./Providers";
 
 export const metadata: Metadata = {
   title: `Webassembly solutions - Advent of Code 2023`,
-  description: "webassembly solutions for advent of code 2023",
+  description: `Webassembly solutions - Advent of Code 2023`,
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
