@@ -8,4 +8,5 @@ export const labels: Record<string, string> = {
   "7": "Camel Cards",
   "8": "Haunted Wasteland",
   "9": "Mirage Maintenance",
+  "10": "Pipe Maze",
 };

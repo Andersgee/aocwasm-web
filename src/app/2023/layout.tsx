@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { WasmProvider } from "./Providers";
 
 export const metadata: Metadata = {
-  title: "2023",
+  title: `Webassembly solutions - Advent of Code 2023`,
   description: "webassembly solutions for advent of code 2023",
 };
 

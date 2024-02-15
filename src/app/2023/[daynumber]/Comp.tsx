@@ -18,14 +18,14 @@ export function Comp({ daynumber }: Props) {
 
   /** make ts happy. `func = gluewasm["funcname"]` */
   type S = Record<string, ((str: string) => string) | undefined>;
-  const solveA = (gluewasm as unknown as S)[`day0${daynumber}solveA`];
-  const solveB = (gluewasm as unknown as S)[`day0${daynumber}solveB`];
+  const solveA = (gluewasm as unknown as S)[`day${daynumber}solveA`];
+  const solveB = (gluewasm as unknown as S)[`day${daynumber}solveB`];
 
   return (
     <>
       <textarea
         ref={ref1}
-        className="w-full max-w-sm"
+        className="w-full max-w-sm font-mono"
         placeholder="input (part 1)"
       />
       <div className="flex items-center gap-2">
@@ -57,7 +57,7 @@ export function Comp({ daynumber }: Props) {
       <hr />
       <textarea
         ref={ref2}
-        className="w-full max-w-sm"
+        className="w-full max-w-sm font-mono"
         placeholder="input (part 2)"
       />
       <div className="flex items-center gap-2">
