@@ -18,14 +18,20 @@ type S = Record<string, ((str: string) => string) | undefined>;
 export default function Page({ params }: Props) {
   return (
     <div className="space-y-4">
-      <a
-        href="https://adventofcode.com/2023/day/1"
-        className="underline decoration-dotted"
-      >
-        <h1>
-          --- Day {params.daynumber}: {labels[params.daynumber]} ---
-        </h1>
-      </a>
+      <h1 className="text-lg">
+        --- Day {params.daynumber}: {labels[params.daynumber]} ---
+      </h1>
+
+      <p className="max-w-[55ch]">
+        See advent of code problem description{" "}
+        <a
+          href={`https://adventofcode.com/2023/day/${params.daynumber}`}
+          className="underline"
+        >
+          here
+        </a>{" "}
+        and get your puzzle input there aswell.
+      </p>
       <Comp daynumber={params.daynumber} />
     </div>
   );

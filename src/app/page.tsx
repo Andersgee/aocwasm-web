@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex justify-center">
       <div>
-        <Link href="/2023/1">2023</Link>
+        <p>solving advent of code with webassembly</p>
       </div>
     </main>
   );

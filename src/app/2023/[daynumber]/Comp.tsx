@@ -28,23 +28,25 @@ export function Comp({ daynumber }: Props) {
         className="w-full max-w-sm"
         placeholder="input (part 1)"
       />
-      <div className="flex">
+      <div className="flex items-center gap-2">
         <button
           disabled={!wasm}
           type="button"
-          className="bg-blue-500 px-3 py-2 disabled:bg-neutral-500"
+          className="shadow-md bg-white hover:bg-neutral-50 px-3 py-2"
           onClick={() => {
             if (ref1.current?.value) {
               try {
                 setResult1(
                   solveA?.(ref1.current.value) ??
-                    "didnt implement this solver yet :("
+                    "didnt implement this solver yet"
                 );
               } catch (error) {
                 setResult1((error as { message: string }).message);
               }
 
               //setResult1(day01solveA(ref1.current.value));
+            } else {
+              setResult1("no input");
             }
           }}
         >
@@ -58,22 +60,24 @@ export function Comp({ daynumber }: Props) {
         className="w-full max-w-sm"
         placeholder="input (part 2)"
       />
-      <div className="flex">
+      <div className="flex items-center gap-2">
         <button
           disabled={!wasm}
           type="button"
-          className="bg-blue-500 px-3 py-2 disabled:bg-neutral-500"
+          className="shadow-md bg-white hover:bg-neutral-100 px-3 py-2"
           onClick={() => {
             if (ref2.current?.value) {
               try {
                 setResult2(
                   solveB?.(ref2.current.value) ??
-                    "didnt implement this solver yet :("
+                    "didnt implement this solver yet"
                 );
               } catch (error) {
                 setResult2((error as { message: string }).message);
               }
               //setResult2(day01solveB(ref2.current.value));
+            } else {
+              setResult2("no input");
             }
           }}
         >

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className="flex justify-center">
       <WasmProvider>{children}</WasmProvider>
     </div>
   );
