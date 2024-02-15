@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import init, { type InitOutput } from "#src/wasm/pkg";
+import init, { type InitOutput } from "#src/wasm/2023";
 
 const WasmContext = createContext<InitOutput | null>(null);
 

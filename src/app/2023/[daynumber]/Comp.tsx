@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 //import { day01solveA, day01solveB } from "#src/wasm/pkg";
-import * as gluewasm from "#src/wasm/pkg";
+import * as gluewasm from "#src/wasm/2023";
 import { useWasm } from "../Providers";
 
 type Props = {
