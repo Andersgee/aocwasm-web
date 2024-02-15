@@ -26,7 +26,7 @@ export function Comp({ daynumber }: Props) {
       <textarea
         ref={ref1}
         className="w-full max-w-sm font-mono"
-        placeholder="input (part 1)"
+        placeholder="puzzle input"
       />
       <div className="flex items-center gap-2">
         <button
@@ -50,26 +50,20 @@ export function Comp({ daynumber }: Props) {
             }
           }}
         >
-          solve
+          solve part 1
         </button>
         <pre>{result1}</pre>
       </div>
-      <hr />
-      <textarea
-        ref={ref2}
-        className="w-full max-w-sm font-mono"
-        placeholder="input (part 2)"
-      />
       <div className="flex items-center gap-2">
         <button
           disabled={!wasm}
           type="button"
           className="shadow-md bg-white hover:bg-neutral-100 px-3 py-2"
           onClick={() => {
-            if (ref2.current?.value) {
+            if (ref1.current?.value) {
               try {
                 setResult2(
-                  solveB?.(ref2.current.value) ??
+                  solveB?.(ref1.current.value) ??
                     "didnt implement this solver yet"
                 );
               } catch (error) {
@@ -81,7 +75,7 @@ export function Comp({ daynumber }: Props) {
             }
           }}
         >
-          solve
+          solve part 2
         </button>
         <pre>{result2}</pre>
       </div>
